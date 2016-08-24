@@ -44,6 +44,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         // Set the listeners for the buttons.
         findViewById(R.id.changeTextBt).setOnClickListener(this);
         findViewById(R.id.activityChangeTextBtn).setOnClickListener(this);
+        findViewById(R.id.NewButton1).setOnClickListener(this);
 
         mTextView = (TextView) findViewById(R.id.textToBeChanged);
         mEditText = (EditText) findViewById(R.id.editTextUserInput);
@@ -64,6 +65,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intent = ShowTextActivity.newStartIntent(this, text);
                 startActivity(intent);
                 break;
+            case R.id.NewButton1:
+                String txt = text + " with New Button";
+                System.out.println(txt);
+                mTextView.setText(txt);
         }
     }
 }
