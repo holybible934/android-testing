@@ -7,3 +7,5 @@ build
 .project
 .settings/	
 .classpath
+bazel-*
+.DS_Store
